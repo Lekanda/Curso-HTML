@@ -33,3 +33,7 @@ Además agregarás a tus sitios las siguientes API`s, SDK`s, Frameworks, librer�
 * Además de las tecnologías anteriores, crearemos galerías, formularios, validaciones, un carrito en línea con cotizador, registros a la base de datos, sistema de inicio de sesión, agregar la información dinámicamente desde la Base de Datos MySQL y mucho más!
 
 * Crearemos un área de administración segura, con password hasheados, loguear usuarios, sesiones y más. Así como una pequeña aplicación en VanillaJS y Ajax para guardar contactos telefónicos con PHP
+
+
+
+> Fecha de inicio: 05/12/2020
