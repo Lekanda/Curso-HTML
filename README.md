@@ -24,7 +24,9 @@
 
   7. **Google Maps API** - Para mostrar un mapa de ubicación
 
-  8. **MailChimp** - Para que los usuarios se inscriban a tu newsletter
+  8. **MailChimp** - Para que los usuarios se inscriban a tu newsletter    
+
+  ---
 
 ### Proyectos
 
@@ -34,6 +36,8 @@
 
 * Además de las tecnologías anteriores, crearemos galerías, formularios, validaciones, un carrito en línea con cotizador, registros a la base de datos, sistema de inicio de sesión, agregar la información dinámicamente desde la Base de Datos MySQL y mucho más!
 
-* Crearemos un área de administración segura, con password hasheados, loguear usuarios, sesiones y más. Así como una pequeña aplicación en VanillaJS y Ajax para guardar contactos telefónicos con PHP
+* Crearemos un área de administración segura, con password hasheados, loguear usuarios, sesiones y más. Así como una pequeña aplicación en VanillaJS y Ajax para guardar contactos telefónicos con PHP   
+
+---
 
 > Fecha de inicio: 30/1/2021
