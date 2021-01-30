@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+# Curso-HTML
 
-You can use the [editor on GitHub](https://github.com/Lekanda/Curso-HTML/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+* Web del curso: [https://lekanda.github.io/Curso-HTML/
+](https://lekanda.github.io/Curso-HTML/)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+---
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Tecnologias usadas    
 
-```markdown
-Syntax highlighted code block
+- En este curso aprendemos **7 Lenguajes y Tecnologías Web:**
 
-# Header 1
-## Header 2
-### Header 3
+  1. **HTML5, CSS3, JavaScript, jQuery, AJAX,  PHP y MySQL**
 
-- Bulleted
-- List
+  2. **APIs,  SDK`s, Frameworks, librerías y características**:
 
-1. Numbered
-2. List
+  3. **AdminLTE** - Crearemos un área de administración segura y atractiva.
 
-**Bold** and _Italic_ and `Code` text
+  4. **Bootstrap** - AdminLTE está construido sobre bootstrap, aprenderás lo básico del framework HTML5 y CSS3 más popular del mundo.
 
-[Link](url) and ![Image](src)
-```
+  5. **CRUD** - Aprende a crear aplicaciones CRUD (Crear, Leer, Actualizar y Delete) con PHP, MySQL y AJAX!
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+  6. **PayPal** - Recibiremos pagos en línea en nuestro proyecto final
 
-### Jekyll Themes
+  7. **Google Maps API** - Para mostrar un mapa de ubicación
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Lekanda/Curso-HTML/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+  8. **MailChimp** - Para que los usuarios se inscriban a tu newsletter    
 
-### Support or Contact
+  ---
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Proyectos
+
+* Sitio Web para una *conferencia de diseño* donde los usuarios *podrán pagar por sus entradas*.
+* Agenda de Contactos en Ajax, PHP, MySQL y JavaScript.
+* UpTask - Administrador de Proyectos en Ajax, PHP, MySQL y JavaScript
+
+* Además de las tecnologías anteriores, crearemos galerías, formularios, validaciones, un carrito en línea con cotizador, registros a la base de datos, sistema de inicio de sesión, agregar la información dinámicamente desde la Base de Datos MySQL y mucho más!
+
+* Crearemos un área de administración segura, con password hasheados, loguear usuarios, sesiones y más. Así como una pequeña aplicación en VanillaJS y Ajax para guardar contactos telefónicos con PHP   
+
+---
+
+> Fecha de inicio: 30/1/2021
