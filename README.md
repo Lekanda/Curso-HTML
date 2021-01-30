@@ -3,7 +3,7 @@
 * Web del curso: [https://lekanda.github.io/Curso-HTML/
 ](https://lekanda.github.io/Curso-HTML/)
 
-
+* Para cambiar a pagina de GitHub: git checkout gh-pages en consola.
 
 
 ### Tecnologias usadas    
