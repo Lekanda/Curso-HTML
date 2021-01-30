@@ -4,23 +4,27 @@
 ](https://lekanda.github.io/Curso-HTML/)
 
 
+
+
+### Tecnologias usadas    
+
 - En este curso aprendemos **7 Lenguajes y Tecnologías Web:**
 
-  - **HTML5, CSS3, JavaScript, jQuery, AJAX,  PHP y MySQL**
+  1. **HTML5, CSS3, JavaScript, jQuery, AJAX,  PHP y MySQL**
 
--  **APIs,  SDK`s, Frameworks, librerías y características**:
+  2. **APIs,  SDK`s, Frameworks, librerías y características**:
 
-  - **AdminLTE** - Crearemos un área de administración segura y atractiva.
+  3. **AdminLTE** - Crearemos un área de administración segura y atractiva.
 
-  - **Bootstrap** - AdminLTE está construido sobre bootstrap, aprenderás lo básico del framework HTML5 y CSS3 más popular del mundo.
+  4. **Bootstrap** - AdminLTE está construido sobre bootstrap, aprenderás lo básico del framework HTML5 y CSS3 más popular del mundo.
 
-  - **CRUD** - Aprende a crear aplicaciones CRUD (Crear, Leer, Actualizar y Delete) con PHP, MySQL y AJAX!
+  5. **CRUD** - Aprende a crear aplicaciones CRUD (Crear, Leer, Actualizar y Delete) con PHP, MySQL y AJAX!
 
-  - **PayPal** - Recibiremos pagos en línea en nuestro proyecto final
+  6. **PayPal** - Recibiremos pagos en línea en nuestro proyecto final
 
-  - **Google Maps API** - Para mostrar un mapa de ubicación
+  7. **Google Maps API** - Para mostrar un mapa de ubicación
 
-  - **MailChimp** - Para que los usuarios se inscriban a tu newsletter
+  8. **MailChimp** - Para que los usuarios se inscriban a tu newsletter
 
 ### Proyectos
 
