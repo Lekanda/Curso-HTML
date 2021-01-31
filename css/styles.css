@@ -28,6 +28,8 @@ body{
     background-color: var(--secundario);
 }
 .navegacion-principal{
+    justify-content: space-between;
+    display: flex;
     padding: 1rem;
 }
 .navegacion-principal a{
