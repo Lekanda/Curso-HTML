@@ -3,10 +3,9 @@
 * Web del curso: [https://lekanda.github.io/Curso-HTML/
 ](https://lekanda.github.io/Curso-HTML/)
 
-* Para cambiar a pagina de GitHub: `git checkout gh-pages en consola`.    
 
-> Fecha de inicio: 30/1/2021
-> Fecha finalizado:
+> Fecha de *inicio*: *30/1/2021*
+> Fecha *finalizado*:
 
 
 ### Tecnologias usadas    
