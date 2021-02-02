@@ -50,4 +50,11 @@ body{
     background-color: var(--primario);
     color: var(--oscuro);
 }
-
+.hero{
+    /* Carga imagen */
+    background-image: url(../img/hero.jpg);
+    /* La imagen no se repite */
+    background-repeat: no-repeat;
+    /* Ocupa todo el tamaño de la pantalla */
+    background-size: cover;
+}
