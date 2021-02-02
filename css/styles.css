@@ -8,6 +8,10 @@
 
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 body{
     font-size: 16px;
@@ -57,4 +61,6 @@ body{
     background-repeat: no-repeat;
     /* Ocupa todo el tamaño de la pantalla */
     background-size: cover;
+    height: 450px;
+    padding: 20px;
 }
