@@ -119,9 +119,8 @@ body{
 .contenido-hero p{
     color: var(--blanco);
 }
-.ubicacion{
+.contenido-hero .ubicacion{
     display: flex;
     /* Al ser el padre flex y column para alinear verticalmente en este caso usamos align-items */
     align-items: flex-end;
 }
-.contenido-hero a{}
