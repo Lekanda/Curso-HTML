@@ -36,6 +36,24 @@ body{
     max-width: 120rem;
     margin: 0 auto;
 }
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+@media(min-width: 768px) {
+     .boton{
+         width: auto;
+     }
+}
 .nav-bg{
     background-color: var(--secundario);
 }
@@ -103,5 +121,7 @@ body{
 }
 .ubicacion{
     display: flex;
+    /* Al ser el padre flex y column para alinear verticalmente en este caso usamos align-items */
     align-items: flex-end;
 }
+.contenido-hero a{}
