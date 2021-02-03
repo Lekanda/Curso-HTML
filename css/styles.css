@@ -137,3 +137,16 @@ body{
     /* Al ser el padre flex y column para alinear verticalmente en este caso usamos align-items */
     align-items: flex-end;
 }
+
+/* Servicios */
+@media(min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        /* grid-template-rows: 200px; */
+    }
+}
+
+
+
+
