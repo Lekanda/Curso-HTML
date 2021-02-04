@@ -169,5 +169,24 @@ body{
     align-items: center;
 }
 
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);/*Utilizar el valor mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
 
 
