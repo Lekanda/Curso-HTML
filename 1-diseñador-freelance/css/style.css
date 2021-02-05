@@ -63,6 +63,17 @@ h3{
 .header__logo{
     margin: 3rem 0;
 }
+/** Footer **/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+}
 /** Navegacion **/
 .navegacion{
     background-color: var(--primarioOscuro);
@@ -70,7 +81,8 @@ h3{
     display: flex;
     justify-content: center;
     /** GAP:Crea espacio entre los elementos que tiene **/
-    gap: 3rem;
+    gap: 2rem;/*Forma nueva; falla en algun navegador */
+
 }
 .navegacion__enlace{
     font-family: var(--fuentePrincipal);
