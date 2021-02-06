@@ -39,3 +39,25 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+
+/* Metodo nuevo: No soportado por todos los navegadores. */
+/*
+@media(min-width: 768px) {
+    .tres-columnas{
+        display: flex;
+        gap: 2rem;
+    }
+}
+*/
+
+/* Metodo Viejo: Soportado por todos los navegadores. */
+@media(min-width: 768px) {
+    .tres-columnas{
+        display: flex;
+        justify-content: space-between;
+    }
+    .entrada-blog{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
