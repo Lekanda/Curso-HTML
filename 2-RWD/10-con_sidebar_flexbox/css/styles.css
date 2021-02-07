@@ -49,3 +49,19 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media(min-width: 768px) {
+    .con-sidebar{
+        display: flex;
+        gap: 2rem;
+    }
+    aside{
+        flex: 1;
+        /* flex: 0 0 calc(33.3% - 1rem); */
+        
+    }
+    article{
+        flex: 3;
+        /* flex: 0 0 calc(66.6% - 1rem);; */
+    }
+}
