@@ -68,11 +68,17 @@ img{
 
 
 
+/*** HEADER ***/
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+.heder__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
 
-
-
-
-
-
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'PT Sans', sans-serif; */
