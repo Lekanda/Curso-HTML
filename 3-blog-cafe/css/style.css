@@ -121,6 +121,8 @@ img{
     .navegacion{
         display: flex;
         gap: 2rem;
+        padding-right: 12rem;
+
     }
 }
 .navegacion__enlace{
@@ -195,8 +197,25 @@ img{
     padding-bottom: 3rem;
     margin-top: 4rem;
 }
+.logo{
+    padding-left: 12rem;
+}
 
 
+/**** nosotros.html ****/
+@media(min-width: 768px) {
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    .sobre-nosotros__imagen{
+        margin-left: 14rem;
+    }
+    .sobre-nosotros__texto{
+        margin-right: 14rem;
+    }
+}
 
 
 
