@@ -141,6 +141,8 @@ img{
 .entrada{
     border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
+    margin-left: 3rem;
+    padding: 2rem;
 }
 .entrada:last-of-type{
     border: none;
@@ -222,4 +224,7 @@ img{
 /*********** Mis ajustes ************/
 .sidebar_heading{
     margin-left: 4rem;
+}
+.titulo-index{
+    margin-left: 15rem;
 }
