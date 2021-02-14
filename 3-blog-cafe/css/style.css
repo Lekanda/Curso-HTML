@@ -51,6 +51,7 @@ h4{
 
 img{
     max-width: 100%;
+    margin:  0 auto;
 }
 
 
@@ -226,7 +227,8 @@ img{
     .curso {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        /* column-gap: 2rem; */
+        column-gap: 2rem;
+        padding: 2rem;
     }
 }
 .curso:last-of-type{
@@ -246,6 +248,13 @@ img{
 .curso__imagen{
     width: 30rem;
     margin-left: 15rem;
+}
+.entrada{
+    display: flex;
+    flex-direction: column;
+}
+.entrada img{
+    margin: 0 auto;
 }
 
 
