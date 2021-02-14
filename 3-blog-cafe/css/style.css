@@ -26,12 +26,7 @@ body{
 
 /*** GLOBALES ***/
 .contenedor{
-    /* Modo 1 */
-    /* max-width: 120rem;
-    width: 90%; */
-    /* Modo 2 (Mas facil)*/
     width: min(90% 120rem);
-
     margin: 0 auto;
 }
 a{
@@ -182,7 +177,8 @@ img{
     border: none;
     margin-bottom: 0;
 }
-.widget-curso__label{
+.widget-curso__label,
+.curso__label {
     font-family: var(--fuenteHeading);
     font-weight: bold;
 }
@@ -221,10 +217,45 @@ img{
 
 
 
+/* curso.html */
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1 px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        /* column-gap: 2rem; */
+    }
+}
+.curso:last-of-type{
+    border: none;
+}
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.curso__info {
+    font-weight: normal;
+}
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+.curso__imagen{
+    width: 30rem;
+    margin-left: 15rem;
+}
+
+
+
+
+
 /*********** Mis ajustes ************/
 .sidebar_heading{
     margin-left: 4rem;
 }
 .titulo-index{
-    margin-left: 15rem;
+    margin-left: 6rem;
 }
