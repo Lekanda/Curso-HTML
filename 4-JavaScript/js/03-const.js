@@ -2,10 +2,10 @@
 // NO SE PUEDE INICIALIZAR UN CONST SIN VALOR !!!
 
 const producto='Audifonos Gamer'; // Iniciar const varibles y asignar valor
-// const disponible; // Inicia const variable pero sin valor. INCORRECTO, hace falta valor.
+let disponible; // Inicia const variable pero sin valor. INCORRECTO, hace falta valor.
 
 // producto = true; // Reasignar el valor de la variable.
-// disponible = true; // No se puede asignar el valor de la disponible, es CONST.
+disponible = true; // No se puede asignar el valor de la disponible, es CONST.
 
 // Iniciar muchas variables
 const producto1='Computadora',
