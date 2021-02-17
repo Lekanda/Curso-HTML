@@ -1,21 +1,32 @@
 // STRINGS
-
-
 // Valen tanto las "" como las ''
 
 // String o cadena de txt
-const producto = "Monitor de 20 pulgadas";
-const producto2 = String('Monitor de 30 Pulgadas');
-const producto3 = new String('Monitor de 40 Pulgadas');
-const producto4 = 'Monitor de 50\"';
-const producto5 = "Monitor de 60\"";
+const tweet = "Aprendiendo JS con el curso de Desarrollo Completo";
+const producto2 = 'Monitor de 30"';
 
 
-console.log(producto);
-console.log(typeof producto);
+//*** Lenght. ***
+// Es una propiedad, no un metodo. No hay que poner ().
+// Nos da el numero de caracteres de la cadena.
+
+console.log(tweet.length);
 console.log(producto2);
-console.log(typeof producto2);
-console.log(producto3);
-console.log(typeof producto3);
-console.log(producto4);
-console.log(producto5);
+
+// **** IndexOf ****
+// Para buscar algo en la cadena. En este caso 'JS'.
+// Devuelve en que numero de caracter esta.
+// Devuelve -1 si no hay.
+console.log(tweet.indexOf('JS'));
+
+
+/*******  Includes(retorna true o false)  *******/
+// Para buscar algo en la cadena. En este caso 'JS'. Mejor que indexOf.
+// Devuelve true o false.
+console.log(tweet.includes('JS'));
+
+
+
+
+
+
