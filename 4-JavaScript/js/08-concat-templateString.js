@@ -15,8 +15,3 @@ console.log('Nombre cliente: ' ,nombre, ' ' , email);// Metodo viejo.
 // Template Strings - String Literals.
 console.log(`Nombre cliente: ${nombre} Email: ${email}`);
 
-
-
-
-
-
