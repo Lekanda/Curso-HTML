@@ -11,3 +11,8 @@ const {nombreProducto, precio, disponible} = producto
 
 console.log(precio);
 console.log(disponible);
+
+
+
+
+
