@@ -35,4 +35,41 @@ numeros.forEach(numero => {
 });
 
 
+// Agregar elementos
+numeros[5]= 60;
+// Otra forma de agregar elementos a un Array. Añade al final del array
+numeros.push(70);
+numeros.push(80,90,100);
+/*
+- Hoy en dia se recomineda no cambiar los valores originales de un array. Por eso ya no se utiliza.
+*/
+// Añade al inicio del array.
+numeros.unshift(-10,-20,-30,-40,-50);
+
+meses.pop(); // Elimina el ultimo elemento
+meses.shift();// Elimina el primer elemento
+
+// Borra 1 elemento a partir del 2.
+meses.splice(2, 1);
+
+console.log(meses);
+
+
+/*
+- Un nuevo enfoque es no modificar los datos originales en un Array. 
+- La opcion es crear uno nuevo con los datos necesarios.
+*/
+// REST o SPREAD Operator.
+// creamos un nuevo array con otro ya creado y despues le añadimos un valor mas al array. RECOMENDADO
+const nuevoArreglo = [...meses, 'Junio'];
+console.log(nuevoArreglo);
+
+
+
+
+
+
+
+
+
 
