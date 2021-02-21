@@ -28,15 +28,24 @@ for (let i = 0; i < carrito.length; i++) {
     console.log(`El producto ${element.nombre} vale ${element.precio} €`);
 }
 
-
-
-
+console.log('******************************************');
 
 // WHILE LOOP
-
-
-
+let i=0;
+while (i<10) {
+    if (i%2===0) {
+        console.log(`El numero ${i} es par`);
+    } else{
+        console.log(`El numero ${i} es impar`);
+    }
+    i++;
+}
 // DO WHILE
+let h=0;
+do {
+    console.log(h);
+    h++;
+} while (h<10);
 
 
 
