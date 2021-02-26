@@ -21,7 +21,6 @@ usuarioAutenticado
         console.log(error);
     })
 
-
 /* 
 - En los promises hay 3 valores posibles:
     1- Pending: no se ha cumplido pero no se ha rechazado.
