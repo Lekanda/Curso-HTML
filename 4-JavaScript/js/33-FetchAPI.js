@@ -14,7 +14,6 @@ async function obtenerEmpleados() {
     // console.log(resultado);
     const datos = await resultado.json();
     console.log(datos);
-
 }
 obtenerEmpleados();
 
