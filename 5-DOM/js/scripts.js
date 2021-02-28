@@ -49,3 +49,35 @@ navegacion.appendChild(nuevoEnlace)
 console.log(nuevoEnlace);
 
 
+// EVENTOS
+
+console.log(1);
+
+// Registrar los eventos
+window.addEventListener('load', function () {
+    console.log(2);
+});// load Espera a que la ventana este lista(cargada: html,img,css... ) y ejecuta la funcion(Callback).
+// El resultado seria: 1,5,2 
+
+// Otra forma (1,5,2,3)
+window.onload = function () {
+    console.log(3);
+}
+
+// Evento con DOCUMENT (1,4,5,2,3); Solo espera a que se descargue el HTML. Lo hace antes que el load y onload. ESTE ES EL ADECUADO. Mas rapido
+document.addEventListener('DOMContentLoaded', function () {
+    console.log(4);
+})
+
+console.log(5);
+
+// Otra forma con el callback por fuera.
+window.addEventListener('load', imprimir);
+function imprimir() {
+    console.log(6);
+}
+
+// Evento al hacer scroll
+window.onscroll = function () {
+    console.log('Scroling....');
+}
