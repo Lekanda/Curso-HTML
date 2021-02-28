@@ -83,7 +83,7 @@ navegacion.appendChild(nuevoEnlace)
 // }
 
 // Seleccionar elementos y asocirles uno nuevo
-const btnEnviar = document.querySelector('.boton--primario')
+const btnEnviar = document.querySelector('.boton--primario');
 btnEnviar.addEventListener('click',function(e){
     // Evento
     console.log(e);
@@ -91,11 +91,11 @@ btnEnviar.addEventListener('click',function(e){
     console.log(e.target);
     // Previene de la accion por default. P ejem para validar un form.
     e.preventDefault();
-
+    
     // Vallidar un formulario
-
-
-
+    
+    
+    
     console.log('Enviando....');
 })
 
@@ -103,7 +103,29 @@ btnEnviar.addEventListener('click',function(e){
 
 // Eventos de los inputs y textarea
 
+const datos = {
+    nombre: '',
+    email:'',
+    mensaje:''
+}
 
+
+const nombre = document.querySelector('#nombre');
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
+
+nombre.addEventListener('input', leerTexto);
+email.addEventListener('input', leerTexto);
+mensaje.addEventListener('input', leerTexto);
+
+function leerTexto(e) {
+    // console.log(e.target.value);
+    // console.log(e.target);
+    
+    datos[e.target.id]=e.target.value;
+
+    console.log(datos);
+}
 
 
 
