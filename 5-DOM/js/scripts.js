@@ -83,21 +83,21 @@ navegacion.appendChild(nuevoEnlace)
 // }
 
 // Seleccionar elementos y asocirles uno nuevo
-const btnEnviar = document.querySelector('.boton--primario');
-btnEnviar.addEventListener('click',function(e){
-    // Evento
-    console.log(e);
-    // Elemento con evento.
-    console.log(e.target);
-    // Previene de la accion por default. P ejem para validar un form.
-    e.preventDefault();
+// const btnEnviar = document.querySelector('.boton--primario');
+// btnEnviar.addEventListener('click',function(e){
+//     // Evento
+//     console.log(e);
+//     // Elemento con evento.
+//     console.log(e.target);
+//     // Previene de la accion por default. P ejem para validar un form.
+//     e.preventDefault();
     
-    // Vallidar un formulario
+//     // Vallidar un formulario
     
     
     
-    console.log('Enviando....');
-})
+//     console.log('enviando formulario');
+// })
 
 
 
@@ -113,19 +113,35 @@ const datos = {
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const formulario = document.querySelector('.formulario');
 
 nombre.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
+// Evento de submit
+formulario.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log('Enviando Formulario');
+
+    // Validar Formulario
+
+
+    // Enviar el formulario
+
+});
+
+
 
 function leerTexto(e) {
     // console.log(e.target.value);
     // console.log(e.target);
-    
-    datos[e.target.id]=e.target.value;
 
+    datos[e.target.id]=e.target.value;
     console.log(datos);
 }
+
+
+
 
 
 
