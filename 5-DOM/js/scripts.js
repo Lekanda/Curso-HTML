@@ -102,13 +102,11 @@ navegacion.appendChild(nuevoEnlace)
 
 
 // Eventos de los inputs y textarea
-
 const datos = {
     nombre: '',
     email:'',
     mensaje:''
 }
-
 
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
@@ -126,64 +124,32 @@ formulario.addEventListener('submit', function (e) {
     const {nombre,email,mensaje}=datos;
     // Alerta de campo vacio
     if(nombre === '' || email ==='' || mensaje===''){
-        mostrarError('Todos los campos son obligatorios')
+        mostrarAlerta('Todos los campos son obligatorios','error');
         return;
     } 
     // Alerta de datos ok
-    mandarDatos('Enviado Formulario ok')
-
-    // Enviar el formulario
-    
+    mostrarAlerta('Enviado Formulario ok')
 });
-
-
-
-
-
 // Funciones de eventos
-
 
 function leerTexto(e) {
     // console.log(e.target.value);
     // console.log(e.target);
-
     datos[e.target.id]=e.target.value;
     // console.log(datos);
 }
 
-
-function mostrarError(mensaje) {
-    // Crear Mensaje
-    const error = document.createElement('P');
-    error.textContent = mensaje;
-    error.classList.add('error')
-    // console.log(error);
-
-    // Poner una alarma en el HTML
-    formulario.appendChild(error);
-    //Temporizador para alarma.
+function mostrarAlerta(mensaje,error=null) {
+    const alerta = document.createElement('P');
+    alerta.textContent=mensaje;
+    console.log(error);
+    if (error) {
+        alerta.classList.add('error');
+    } else{
+        alerta.classList.add('success')
+    }
+    formulario.appendChild(alerta);
     setTimeout(() => {
-        error.remove();
+        alerta.remove();
     }, 5000);
-
-
 }
-
-function mandarDatos(mensaje) {
-    // Crear Mensaje
-    const mss = document.createElement('P');
-    mss.textContent = mensaje;
-    mss.classList.add('success')
-
-    // Poner una alarma en el HTML
-    formulario.appendChild(mss);
-    //Temporizador para alarma.
-    setTimeout(() => {
-        mss.remove();
-    }, 5000);
-
-
-}
-
-
-
