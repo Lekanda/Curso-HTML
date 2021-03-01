@@ -121,15 +121,26 @@ mensaje.addEventListener('input', leerTexto);
 // Evento de submit
 formulario.addEventListener('submit', function (e) {
     e.preventDefault();
-    console.log('Enviando Formulario');
-
+    
     // Validar Formulario
-
+    const {nombre,email,mensaje}=datos;
+    // Alerta de campo vacio
+    if(nombre === '' || email ==='' || mensaje===''){
+        mostrarError('Todos los campos son obligatorios')
+        return;
+    } 
+    // Alerta de datos ok
+    mandarDatos('Enviado Formulario ok')
 
     // Enviar el formulario
-
+    
 });
 
+
+
+
+
+// Funciones de eventos
 
 
 function leerTexto(e) {
@@ -137,11 +148,42 @@ function leerTexto(e) {
     // console.log(e.target);
 
     datos[e.target.id]=e.target.value;
-    console.log(datos);
+    // console.log(datos);
 }
 
 
+function mostrarError(mensaje) {
+    // Crear Mensaje
+    const error = document.createElement('P');
+    error.textContent = mensaje;
+    error.classList.add('error')
+    // console.log(error);
 
+    // Poner una alarma en el HTML
+    formulario.appendChild(error);
+    //Temporizador para alarma.
+    setTimeout(() => {
+        error.remove();
+    }, 5000);
+
+
+}
+
+function mandarDatos(mensaje) {
+    // Crear Mensaje
+    const mss = document.createElement('P');
+    mss.textContent = mensaje;
+    mss.classList.add('success')
+
+    // Poner una alarma en el HTML
+    formulario.appendChild(mss);
+    //Temporizador para alarma.
+    setTimeout(() => {
+        mss.remove();
+    }, 5000);
+
+
+}
 
 
 

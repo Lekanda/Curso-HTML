@@ -235,6 +235,17 @@ img {
     color: var(--blanco);
     text-transform: uppercase;
 }
+
+
+.success {
+    background-color: rgb(11, 207, 5);
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+
 .correcto {
     background-color: rgb(74, 185, 0);
     text-align: center;
