@@ -1,29 +1,29 @@
-const {series} = require('gulp');
+const {src, dest} = require('gulp');
+const sass = require('gulp-sass');
 
-//Done => hecho y corta el codigo.
-function css(done) {
-    console.log('Compilando');
-    done();
+// Funcion para compilar SASS
+
+/* 
+- expanded: vista mas expandida.
+- compressed: vista minificada
+*/
+
+
+function css() {
+    return src('src/scss/app.scss')
+        .pipe(sass())
+        .pipe(dest('./build/css'))
 }
 
-function javascript(done) {
-    console.log('Compilando JS');
-    done();
+function minificarcss() {
+    return src('src/scss/app.scss')
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
+        .pipe(dest('./build/css'))
 }
 
-function minificarHTML(done) {
-    console.log('Minificando');
-    done();
-}
 
-// Asi llamamos a la funcion.
 exports.css = css;
-exports.javascript = javascript;
-// Ejecuta en serie las fuunciones; 1º css 2º javascript
-exports.tareas = series(css,javascript,minificarHTML);
-// Por defecto. Se inicia con GULP en consola
-// exports.default = series(css,javascript,minificarHTML);
+exports.minificarcss = minificarcss;
 
-
-// Parallel. Hace las funciones en paralelo.
-exports.default = parallel(css,javascript,minificarHTML);
