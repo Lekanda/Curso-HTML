@@ -1,10 +1,13 @@
-$fuentePrincipal : "Arial";
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/globales';
 
 body{
     font-family: $fuentePrincipal;
 }
 h1{
     font-family: $fuentePrincipal;
+    margin-top: 40px;
 }
 p{
     font-family: $fuentePrincipal;
