@@ -1,15 +1,32 @@
 .header{
     background-color: $verde;
     .contenido-header{
+        padding: $separacion / 2 0;
 
     }
+    .contenido-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+
     h1{
-        
+       color: $blanco; 
     }
 }
+
 .navegacion-principal{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
     a{
-        
+        color: $blanco;
+        font-size: 2rem;
+        &:hover{
+            color: $amarillo;
+        }
     }
+    
 }
 

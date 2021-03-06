@@ -330,6 +330,9 @@ a {
 img {
   max-width: 100%; }
 
+h1, h2, h3 {
+  margin: 0; }
+
 h1 {
   font-size: 4rem; }
 
@@ -341,3 +344,21 @@ h3 {
 
 .header {
   background-color: #4CB8B3; }
+  .header .contenido-header {
+    padding: 2.5rem 0; }
+  .header .contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header h1 {
+    color: #FFF; }
+
+.navegacion-principal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem; }
+  .navegacion-principal a {
+    color: #FFF;
+    font-size: 2rem; }
+    .navegacion-principal a:hover {
+      color: #FEF46D; }
