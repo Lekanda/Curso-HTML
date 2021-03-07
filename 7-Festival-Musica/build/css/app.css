@@ -455,3 +455,56 @@ h3 {
   display: block;
   width: 100%;
 }
+
+.contenido-video {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contenido-video h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #FFF;
+  font-size: 7rem;
+}
+
+.contenido-video span {
+  background-color: #F53756;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+.sobre-festival {
+  padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.contenido-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenido-festival h2 {
+  font-size: 3rem;
+}
+
+.contenido-festival .fecha {
+  color: #F53756;
+  font-weight: 700;
+}
+
+.contenido-festival .texto {
+  line-height: 1.5;
+}
