@@ -1,6 +1,7 @@
-const {series,src, dest,watch} = require('gulp');
+const {series,src, dest,watch,parallel} = require('gulp');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
+const notify = require('gulp-notify');
 
 
 
@@ -24,8 +25,12 @@ function minificarcss() {
 function imagenes() {
     // Lee todas las imagenes que esten ahi(src/img)
     return src('src/img/**/*')
+        // Minifica la imagen.
         .pipe(imagemin())
+        // Destino de img minificada.
         .pipe(dest('./build/img'))
+        // Notificacion de imagen Minifacada.
+        .pipe(notify({message:'Imagen Minificada'}));
 }
 
 
@@ -44,3 +49,7 @@ exports.css = css;
 exports.minificarcss = minificarcss;
 exports.imagenes = imagenes;
 exports.watchArchivos = watchArchivos;
+
+// queremos que watchArchivos y imagenes se esten ejcutando todo el tiempo. Con Default
+exports.default = series(css, imagenes,watchArchivos);
+
