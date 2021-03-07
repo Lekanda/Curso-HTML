@@ -46,4 +46,23 @@
     }
 }
 
+.calendario{
+    padding: 0;
+    list-style: none;
+    li{
+        padding: $separacion / 2;
+        font-weight: $bold;
+        span{
+            font-weight: $regular;
+        }
+    }
+}
+// Darken : Funcion de SASS. Oscurece.(0-100). LO MISMO con LIGHTEN.
+.bg-verde .calendario li:nth-child(odd){
+    background-color: darken($verde, 10);
+}
+.bg-amarillo .calendario li:nth-child(odd){
+    background-color: darken($amarillo, 10);
+}
+
 
