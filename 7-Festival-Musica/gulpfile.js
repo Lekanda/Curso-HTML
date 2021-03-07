@@ -2,11 +2,15 @@ const {series,src, dest,watch,parallel} = require('gulp');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 const notify = require('gulp-notify');
+const webp = require('gulp-webp');
 
-
+const paths = {
+    imagenes:'src/img/**/*',
+    scss:'src/scss/**/*.scss'
+}
 
 function css() {
-    return src('src/scss/app.scss')
+    return src(paths.scss)
         .pipe(sass({
             outputStyle:'expanded'
         }))
@@ -14,7 +18,7 @@ function css() {
 }
 
 function minificarcss() {
-    return src('src/scss/app.scss')
+    return src(paths.scss)
         .pipe(sass({
             outputStyle: 'compressed'
         }))
@@ -24,7 +28,7 @@ function minificarcss() {
 // Minificar imagenes (Reducir peso de imagen)
 function imagenes() {
     // Lee todas las imagenes que esten ahi(src/img)
-    return src('src/img/**/*')
+    return src(paths.imagenes)
         // Minifica la imagen.
         .pipe(imagemin())
         // Destino de img minificada.
@@ -34,11 +38,16 @@ function imagenes() {
 }
 
 
-
+function versionWebp() {
+    return src(paths.imagenes)
+        .pipe(webp())
+        .pipe(dest('build/img'))
+        .pipe(notify({message:'Version Webp hecha'}))
+}
 
 
 function watchArchivos() {
-    watch('src/scss/**/*.scss', css);
+    watch(paths.scss, css);
 }
 /*
     - * = La carpeta actual. src/scss/*.scss
@@ -51,5 +60,5 @@ exports.imagenes = imagenes;
 exports.watchArchivos = watchArchivos;
 
 // queremos que watchArchivos y imagenes se esten ejcutando todo el tiempo. Con Default
-exports.default = series(css, imagenes,watchArchivos);
+exports.default = series(css, imagenes,versionWebp, watchArchivos);
 
