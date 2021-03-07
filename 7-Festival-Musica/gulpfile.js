@@ -1,5 +1,8 @@
 const {series,src, dest,watch} = require('gulp');
 const sass = require('gulp-sass');
+const imagemin = require('gulp-imagemin');
+
+
 
 function css() {
     return src('src/scss/app.scss')
@@ -17,6 +20,18 @@ function minificarcss() {
         .pipe(dest('./build/css'))
 }
 
+// Minificar imagenes (Reducir peso de imagen)
+function imagenes() {
+    // Lee todas las imagenes que esten ahi(src/img)
+    return src('src/img/**/*')
+        .pipe(imagemin())
+        .pipe(dest('./build/img'))
+}
+
+
+
+
+
 function watchArchivos() {
     watch('src/scss/**/*.scss', css);
 }
@@ -27,4 +42,5 @@ function watchArchivos() {
 
 exports.css = css;
 exports.minificarcss = minificarcss;
+exports.imagenes = imagenes;
 exports.watchArchivos = watchArchivos;
