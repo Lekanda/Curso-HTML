@@ -1,0 +1,20 @@
+.galeria{
+    padding: $separacion 0;
+    h3{
+        text-align: center;
+    }
+}
+.galeria-imagenes{
+    padding: 0;
+    list-style: none;
+    margin-top: $separacion;
+
+    @include grid(2, $separacion);
+
+    @include tablet{
+        @include grid(4,$separacion / 2);
+    }
+    @include desktop{
+        @include grid(6,$separacion / 2);
+    }
+}
