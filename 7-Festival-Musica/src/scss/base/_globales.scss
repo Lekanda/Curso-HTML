@@ -8,6 +8,11 @@ html{
 body{
     font-family: $fuentePrincipal;
     font-size: 1.6rem;
+
+    // no deja hacer scroll cuando imagen grande.
+    &.fijar-body{
+        overflow: hidden;
+    }
 }
 p{
     font-size: 2rem;
