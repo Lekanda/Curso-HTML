@@ -652,3 +652,26 @@ h3 {
 .btn-cerrar:hover {
   cursor: pointer;
 }
+
+.boletos {
+  padding: 5rem 0;
+}
+
+.boletos h3 {
+  text-align: center;
+  color: #FFF;
+}
+
+.boletos .contenedor-boletos {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.boletos .plan p {
+  color: #FFF;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
