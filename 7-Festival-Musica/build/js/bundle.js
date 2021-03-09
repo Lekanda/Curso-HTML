@@ -1,6 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
     scrollNav();
+    navegacionFija();
 });
+
+
+function navegacionFija() {
+
+    const barra = document.querySelector('.header');
+
+    // Registrar el intersection obeserver
+    const observer = new IntersectionObserver(function (entries) {
+        // console.log(entries[0]);
+        if (entries[0].isIntersecting) {
+            // console.log('Elemento visible');
+            barra.classList.remove('fijo');
+        } else {
+            // console.log('Elemento no visible');
+            barra.classList.add('fijo');
+        }
+    })
+
+    // Elemento a Observar
+    observer.observe(document.querySelector('.video'));
+}
+
+
 
 function scrollNav() {
     const enlaces = document.querySelectorAll('.navegacion-principal a');
@@ -18,6 +42,11 @@ function scrollNav() {
         });
     });
 }
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     crearGaleria();
 });
