@@ -24,5 +24,11 @@
             font-size: 3rem;
             font-weight: $bold;
         }
+        &.seleccionado{
+            background-color: $azul;
+            p{
+                color: $blanco;
+            }
+        }
     }
 }
