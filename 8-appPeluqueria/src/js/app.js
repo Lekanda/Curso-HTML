@@ -18,8 +18,8 @@ async function mostrarServicios() {
 
         const {servicios} = db;
         // console.log(servicios);
-        // console.log(servicios);
 
+        
         // Generar el HTML
         servicios.forEach(servicio => {
             // console.log(servicio);
