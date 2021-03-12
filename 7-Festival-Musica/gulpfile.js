@@ -23,6 +23,8 @@ const paths = {
     js:'src/js/**/*.js'
 }
 
+
+// TODO minificar imagenes.
 function css() {
     return src(paths.scss)
         .pipe(sourcemaps.init())
