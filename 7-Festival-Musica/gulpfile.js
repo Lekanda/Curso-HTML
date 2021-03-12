@@ -12,6 +12,9 @@ const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 
 
+// Utilidades JavaScript
+const terser = require('gulp-terser-js');
+const rename = require('gulp-rename');
 
 
 const paths = {
@@ -33,7 +36,11 @@ function css() {
 
 function javascript() {
     return src(paths.js)
+        .pipe(sourcemaps.init())
         .pipe(concat('bundle.js') )
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(dest('./build/js') )
 }
 
