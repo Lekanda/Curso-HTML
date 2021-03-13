@@ -28,9 +28,11 @@ body{
     .seccion{
         margin-top: $separacion / 2;
         display: none;
-        &:first-of-type{
-            display: block;
-        }
     }
+}
+
+.mostrar-seccion{
+    display: block !important;
+
 }
 

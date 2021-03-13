@@ -8,12 +8,14 @@
         text-align: center;
         text-transform: uppercase;
         border: none;
-        &:hover{
-            cursor: grab;
+        &.actual{
             background-color: $azul;
             color: $blanco;
-            transition: all 500ms;    }
         }
 
-    
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
 }
