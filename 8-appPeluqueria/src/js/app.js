@@ -14,6 +14,11 @@ function iniciarApp() {
     // Oculta o muestra una seccion segun el tab al que se presiona
     cambiarSeccion();
 
+    // Paginacion siguiente y anterior
+    paginaSiguiente();
+
+    paginaAnterior();
+
 }
 
 
@@ -142,3 +147,26 @@ function seleccionarServicio(e) {
         elemento.classList.add('seleccionado');
     }
 }
+
+
+function paginaSiguiente() {
+    // console.log('siguiente');
+    const paginaSiguiente = document.querySelector('#siguiente');
+    paginaSiguiente.addEventListener('click', () => {
+        pagina++;
+        console.log(pagina);
+    })
+}
+
+function paginaAnterior() {
+    // console.log('anterior');
+    const paginaAnterior = document.querySelector('#anterior');
+    paginaAnterior.addEventListener('click', () => {
+        pagina--;
+        console.log(pagina);
+    })
+    
+}
+
+
+
