@@ -157,7 +157,7 @@ function seleccionarServicio(e) {
     if (elemento.classList.contains('seleccionado')) {
         elemento.classList.remove('seleccionado');
 
-        console.log(elemento.dataset.idServicio);
+        // console.log(elemento.dataset.idServicio);
         const id = parseInt(elemento.dataset.idServicio);
 
         eliminarServicio(id);
@@ -184,12 +184,7 @@ function eliminarServicio(id) {
     const {servicios} = cita;
     cita.servicios = servicios.filter(servicio => servicio.id !== id);
 
-    console.log(cita);
-    
-
-
-    
-
+    // console.log(cita);
 }
 
 
@@ -200,7 +195,7 @@ function agregarServicio(servicioObj) {
 
     cita.servicios = [...servicios, servicioObj];
 
-    console.log(cita);
+    // console.log(cita);
 
 }
 
@@ -210,7 +205,7 @@ function paginaSiguiente() {
     const paginaSiguiente = document.querySelector('#siguiente');
     paginaSiguiente.addEventListener('click', () => {
         pagina++;
-        console.log(pagina);
+        // console.log(pagina);
 
         botonesPaginador();
     })
@@ -221,7 +216,7 @@ function paginaAnterior() {
     const paginaAnterior = document.querySelector('#anterior');
     paginaAnterior.addEventListener('click', () => {
         pagina--;
-        console.log(pagina);
+        // console.log(pagina);
 
         botonesPaginador();
     })
@@ -270,11 +265,11 @@ function mostrarResumen() {
         const noServicios = document.createElement('P');
         noServicios.textContent = 'Faltan datos para tu cita';
         noServicios.classList.add('invalidar-cita');
-        console.log(noServicios);
+        // console.log(noServicios);
 
         // Agregar a Resumen DIV
         resumenDiv.appendChild(noServicios);
-        console.log(resumenDiv);
+        // console.log(resumenDiv);
     }
 }
 
@@ -297,12 +292,48 @@ function nombreCita() {
 
         // validar que el nombre txt debetener algo
         if (nombreTexto === '' || nombreTexto.length < 3 ) {
-            console.log('Nombre no valido...');
+            mostrarAlerta('Nombre no valido...','error');
         } else {
             // console.log('Nombre correcto', e.target.value);
+            const alerta = document.querySelector('.alerta');
+            if (alerta) {
+                alerta.remove();
+            }
             cita.nombre = nombreTexto;
         }
-        console.log(cita);
+        // console.log(cita);
 
     })
 }
+
+
+function mostrarAlerta(mensaje,tipo) {
+    // console.log('El mensaje es: ', mensaje);
+
+    // Sí hay una alerta previa, entonces nocrear otra.
+    const alertaPrevia = document.querySelector('.alerta');
+    if (alertaPrevia) {
+        return;
+    }
+
+
+    // Crear el div para la alerta.
+    const alerta = document.createElement('DIV');
+    alerta.textContent= mensaje;
+    alerta.classList.add('alerta');
+    if (tipo === 'error') {
+        alerta.classList.add('error');
+    }
+    // console.log(alerta);
+
+    // Insertar en el HTML la Alerta
+    const formulario = document.querySelector('.formulario');
+    formulario.appendChild(alerta);
+
+
+    // Eliminar la alerta despues de 3 sg
+    setTimeout(() => {
+        alerta.remove();
+    }, 3000);
+}
+
