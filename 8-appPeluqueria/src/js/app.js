@@ -148,13 +148,56 @@ function seleccionarServicio(e) {
         // console.log('click en el DIV');
         elemento = e.target
     }
-    console.log(elemento.dataset.idServicio);
+    // console.log(elemento.dataset.idServicio);
 
     if (elemento.classList.contains('seleccionado')) {
         elemento.classList.remove('seleccionado');
+
+        console.log(elemento.dataset.idServicio);
+        const id = parseInt(elemento.dataset.idServicio);
+
+        eliminarServicio(id);
     } else {
         elemento.classList.add('seleccionado');
+        // console.log(elemento.dataset.idServicio);
+        // console.log(elemento.firstElementChild.textContent);
+        // console.log(elemento.firstElementChild.nextElementSibling.textContent);
+
+        const servicioObj = {
+            id: parseInt(elemento.dataset.idServicio),
+            nombre: elemento.firstElementChild.textContent,
+            precio: elemento.firstElementChild.nextElementSibling.textContent
+        } 
+        // console.log(servicioObj);
+
+        agregarServicio(servicioObj);
     }
+}
+
+function eliminarServicio(id) {
+    // console.log('Eliminando Servicio....', id);
+
+    const {servicios} = cita;
+    cita.servicios = servicios.filter(servicio => servicio.id !== id);
+
+    console.log(cita);
+    
+
+
+    
+
+}
+
+
+function agregarServicio(servicioObj) {
+    // console.log('Agregando Servicio....');
+
+    const {servicios} = cita;
+
+    cita.servicios = [...servicios, servicioObj];
+
+    console.log(cita);
+
 }
 
 
