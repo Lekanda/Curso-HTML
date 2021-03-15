@@ -35,6 +35,8 @@ function iniciarApp() {
     nombreCita();
     fechaCita();
 
+    // Deshabilita dias pasados para pedir cita.
+    deshabilitarFechaAnterior();
 
 }
 
@@ -371,11 +373,55 @@ function fechaCita() {
             cita.fecha = fechaInput.value;
         }
 
-        console.log(cita);
-
-
+        // console.log(cita);
 
     })
-
 }
 
+
+
+// function deshabilitarFechaAnterior() {
+//         const inputFecha = document.querySelector('#fecha');
+
+//         const fechaAhora = new Date();
+//         const year = fechaAhora.getFullYear();
+//         const mes = fechaAhora.getMonth() + 1;
+//         // Solo se puede reservar un dia adelante del actual. Por Organizacion de la peluqueria.
+//         const dia = fechaAhora.getDate() + 1;
+
+
+
+
+//         // Formato de fecha deseado: 2021-03-15
+//         const fechaDeshabilitar = `${year}-${mes < 10 ? `0${mes}` : mes}-${dia}`
+
+//         // console.log(fechaDeshabilitar);
+
+//         inputFecha.min = fechaDeshabilitar;
+
+// }
+
+/*
+- getFullYear : Da el año
+- getDate : Da el dia
+- getMonth : Da el mes; En JS Enero es el mes 0 no el 1.
+*/
+
+function deshabilitarFechaAnterior(){
+ 
+    const inputFecha = document.querySelector('#fecha');
+ 
+    
+    fechaAhora = new Date();
+    const year=fechaAhora.getFullYear();
+    let mes=fechaAhora.getMonth()+1;
+    let dia=fechaAhora.getDate()+1;
+ 
+    //formato deseado 2021-02-22 (AAAA-MM-DD)
+    const fechaDeshabilitar = `${year}-${mes < 10 ? `0${mes}` : mes}-${dia < 10 ? `0${dia}` : dia}`;
+ 
+    console.log(fechaDeshabilitar);
+    
+    inputFecha.min = fechaDeshabilitar;
+   
+}
