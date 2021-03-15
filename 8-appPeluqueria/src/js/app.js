@@ -33,6 +33,7 @@ function iniciarApp() {
 
     // Validar y almacenar el nombre en el Objeto cita.
     nombreCita();
+    fechaCita();
 
 
 }
@@ -335,5 +336,46 @@ function mostrarAlerta(mensaje,tipo) {
     setTimeout(() => {
         alerta.remove();
     }, 3000);
+}
+
+
+
+function fechaCita() {
+    const fechaInput = document.querySelector('#fecha');
+    // console.log(fechaInput);
+
+    fechaInput.addEventListener('input', e => {
+        // console.log(e.target.value);// es una String
+
+        // Convertir a fecha
+        const dia = new Date(e.target.value).getUTCDay();
+        // console.log(dia);
+
+        // const opciones = {
+        //     weekday: 'long',
+        //     month: 'long',
+        //     year: 'numeric',
+        //     day: 'numeric'
+        // }
+        // console.log(dia.toLocaleDateString('es-ES', opciones));// Convierte fecha a Español.
+
+        // Sí 0 o 6 esta incluido en dia(Sabado, Domingo)
+        if ([0,6].includes(dia)) {
+            // Prevenir la fecha mal puesta para que no se ponga
+            e.preventDefault();
+            fechaInput.value = '';
+            mostrarAlerta('Seleccionaste Sabado o Domingo; No se trabaja', 'error');
+        } else {
+            // console.log('Dia Laboral');
+            // console.log(fechaInput.value);
+            cita.fecha = fechaInput.value;
+        }
+
+        console.log(cita);
+
+
+
+    })
+
 }
 
