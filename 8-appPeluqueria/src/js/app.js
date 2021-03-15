@@ -1,5 +1,12 @@
 let pagina = 1;
 
+const cita = {
+    nombre:'',
+    fecha:'',
+    hora:'',
+    servicios:[]
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     iniciarApp();
 });
@@ -20,6 +27,9 @@ function iniciarApp() {
 
     // Compruebe la pagina para ocultar los botones de sigui y ant.
     botonesPaginador();
+
+    // Muestra el resumen de la cita o mensaje de error sí no pasa la validacion.
+    mostrarResumen();
 
 }
 
@@ -192,4 +202,31 @@ function botonesPaginador() {
 
 
     mostrarSeccion();// cambia la seccion que se muestra
+}
+
+
+
+function mostrarResumen() {
+    // console.log(cita);
+
+    // Destructuring de cita
+    const {nombre,fecha,hora,servicios} = cita;
+
+    // Seleccionar el resumen(paso 3)
+    const resumenDiv = document.querySelector('.contenido-resumen');
+
+    // Validacion de objeto.
+    // console.log(Object.values(cita));
+    if (Object.values(cita).includes('')) {
+        // console.log('El objeto cita esta vacio');
+
+        const noServicios = document.createElement('P');
+        noServicios.textContent = 'Faltan datos para tu cita';
+        noServicios.classList.add('invalidar-cita');
+        console.log(noServicios);
+
+        // Agregar a Resumen DIV
+        resumenDiv.appendChild(noServicios);
+        console.log(resumenDiv);
+    }
 }
