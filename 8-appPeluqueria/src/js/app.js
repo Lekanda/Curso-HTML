@@ -31,6 +31,10 @@ function iniciarApp() {
     // Muestra el resumen de la cita o mensaje de error sí no pasa la validacion.
     mostrarResumen();
 
+    // Validar y almacenar el nombre en el Objeto cita.
+    nombreCita();
+
+
 }
 
 
@@ -272,4 +276,33 @@ function mostrarResumen() {
         resumenDiv.appendChild(noServicios);
         console.log(resumenDiv);
     }
+}
+
+
+
+/*
+- input => se ejecuta cada vez que cambia (tecleo).
+- Change => se ejecuta una vez le damos enter. 
+
+- Trim Quita los espacios al principio y al final.
+- Tambien TrimStart y TrimEnd.
+*/
+function nombreCita() {
+    const nombreInput = document.querySelector('#nombre');
+    nombreInput.addEventListener('input', (e) => {
+        // console.log('escribiendo...');
+        // console.log(e.target.value);
+        const nombreTexto =  e.target.value.trim();
+        // console.log(nombreTexto);
+
+        // validar que el nombre txt debetener algo
+        if (nombreTexto === '' || nombreTexto.length < 3 ) {
+            console.log('Nombre no valido...');
+        } else {
+            // console.log('Nombre correcto', e.target.value);
+            cita.nombre = nombreTexto;
+        }
+        console.log(cita);
+
+    })
 }
