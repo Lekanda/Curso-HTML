@@ -469,7 +469,7 @@ function horaCita() {
         // console.log(horaCita);
 
         if (hora[0] < 10 || hora[0] >18) {
-            console.log('Hora no valida; Cerrado');
+            // console.log('Hora no valida; Cerrado');
             mostrarAlerta('Cerrado', 'error');
             setTimeout(() => {
                 inputHora.value = '';
@@ -479,5 +479,5 @@ function horaCita() {
             cita.hora = horaCita;
             console.log(cita);
         }
-    })
+    });
 }
