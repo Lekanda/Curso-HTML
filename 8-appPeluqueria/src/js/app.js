@@ -367,9 +367,6 @@ function mostrarResumen() {
     resumenDiv.appendChild(cantidadPagar);
     
 
-
-
-
 }
 
 
