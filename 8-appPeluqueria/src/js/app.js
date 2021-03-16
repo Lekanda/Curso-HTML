@@ -257,7 +257,7 @@ function botonesPaginador() {
 
 
 function mostrarResumen() {
-    console.log(cita);
+    // console.log(cita);
 
     // Destructuring de cita
     const {nombre,fecha,hora,servicios} = cita;
@@ -288,6 +288,11 @@ function mostrarResumen() {
         return;
     }
     // Mostrar el resumen
+    const headingCita = document.createElement('H3');
+    headingCita.textContent = 'Datos de la Cita';
+
+
+
     const nombreCita = document.createElement('P');
     nombreCita.innerHTML = `<span>Nombre:</span> ${nombre}`;
 
@@ -298,10 +303,46 @@ function mostrarResumen() {
     horaCita.innerHTML = `<span>Hora:</span> ${hora}`;
 
 
+    const serviciosCita = document.createElement('DIV');
+    serviciosCita.classList.add('resumen-servicios');
 
+    const headingServicios = document.createElement('H3');
+    headingServicios.textContent = 'Resumen de servicios';
+
+    serviciosCita.appendChild(headingServicios);
+    
+    // Iterar sobre el arreglo de servicios.
+    servicios.forEach(servicio => {
+        const {nombre,precio} = servicio;
+
+        const contenedorServicio = document.createElement('DIV');
+        contenedorServicio.classList.add('contenedor-servicio');
+
+        const textoServicio = document.createElement('P');
+        textoServicio.textContent = nombre;
+
+        const precioServicio = document.createElement('P');
+        precioServicio.textContent = precio;
+        precioServicio.classList.add('precio');
+
+        // console.log(textoServicio);
+        // console.log(precioServicio);
+
+        // Colocar Texto y Precio en el DIV
+        contenedorServicio.appendChild(textoServicio);
+        contenedorServicio.appendChild(precioServicio);
+
+        serviciosCita.appendChild(contenedorServicio)
+
+    });
+
+
+    resumenDiv.appendChild(headingCita);
     resumenDiv.appendChild(nombreCita);
     resumenDiv.appendChild(fechaCita);
     resumenDiv.appendChild(horaCita);
+
+    resumenDiv.appendChild(serviciosCita);
 
 
     console.log(nombreCita);
@@ -309,36 +350,28 @@ function mostrarResumen() {
 
 
 
-/*
-- input => se ejecuta cada vez que cambia (tecleo).
-- Change => se ejecuta una vez le damos enter. 
 
-- Trim Quita los espacios al principio y al final.
-- Tambien TrimStart y TrimEnd.
-*/
 function nombreCita() {
     const nombreInput = document.querySelector('#nombre');
-    nombreInput.addEventListener('input', (e) => {
-        // console.log('escribiendo...');
-        // console.log(e.target.value);
-        const nombreTexto =  e.target.value.trim();
-        // console.log(nombreTexto);
 
-        // validar que el nombre txt debetener algo
-        if (nombreTexto === '' || nombreTexto.length < 3 ) {
-            mostrarAlerta('Nombre no valido...','error');
+    nombreInput.addEventListener('input', e => {
+        const nombreTexto = e.target.value.trim();
+
+        // Validación de que nombreTexto debe tener algo
+        if( nombreTexto === '' || nombreTexto.length < 3 ) {
+            mostrarAlerta('Nombre no valido', 'error')
         } else {
-            // console.log('Nombre correcto', e.target.value);
             const alerta = document.querySelector('.alerta');
-            if (alerta) {
+            if(alerta) {
                 alerta.remove();
             }
             cita.nombre = nombreTexto;
         }
-        // console.log(cita);
-
-    })
+    });
 }
+
+
+
 
 
 function mostrarAlerta(mensaje,tipo) {
@@ -465,7 +498,7 @@ function horaCita() {
         const horaCita = e.target.value;
         const hora = horaCita.split(':');
 
-        console.log(hora);
+        // console.log(hora);
         // console.log(horaCita);
 
         if (hora[0] < 10 || hora[0] >18) {
@@ -477,7 +510,7 @@ function horaCita() {
         } else {
             // console.log('Hora valida');
             cita.hora = horaCita;
-            console.log(cita);
+            // console.log(cita);
         }
     });
 }
