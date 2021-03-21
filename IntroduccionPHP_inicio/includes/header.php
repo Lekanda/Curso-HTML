@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introducción a PHP - Código Con Juan</title>
+    <title>Fundamentos de PHP</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,8 +12,8 @@
 
 
     <div class="contenido">
-        <h1>Isset-Empty</h1>
-        <a href="http://www.codigoconjuan.com" target="_blank">codigoconjuan.com</a>
+        <h1>PHP</h1>
+        <a href="#" target="_blank">Mi Web</a>
         <p>Introducción a PHP</p>
         <p class="hashtag">#DesarrolloWebCompleto</p>
 
