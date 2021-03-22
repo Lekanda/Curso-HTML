@@ -1,6 +1,8 @@
 <?php include 'includes/header.php';
 
+require('funciones.php');
 
+iniciarApp();
 
 
 
