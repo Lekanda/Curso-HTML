@@ -10,6 +10,10 @@
     .navegacion{
         visibility: visible;
         opacity: 1;
+        height: auto;
+        a{
+            align-items: flex-start;
+        }
     }
 
     .copyright{

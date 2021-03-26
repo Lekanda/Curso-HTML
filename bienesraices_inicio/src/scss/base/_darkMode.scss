@@ -4,11 +4,12 @@
     p{
         color: $blanco;
     }
-    a,h1,h2,h3,h4{
+    a,h1,h2,h3,h4,blockquote{
         color: $gris;
     }
 
-    .anuncio{
+    .anuncio,
+    .resumen-propiedad{
         background-color: $gris-oscuro;
         border: 1px solid $gris-oscuro;
 
@@ -20,5 +21,19 @@
         }
     }
 
-    
+    .formulario{
+        label,
+        legend,
+        p{
+            color: $gris;
+        }
+
+        input:not([type="submit"]),
+        textarea,
+        select{
+            background-color: $gris-oscuro;
+            border: 1px solid darken($gris-oscuro, 18);
+            color: $blanco;
+        }
+    }
 }

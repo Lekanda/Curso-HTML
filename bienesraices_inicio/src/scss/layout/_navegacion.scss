@@ -15,7 +15,7 @@
 
     &:hover{
         cursor: pointer;
-        
+
     }
 
 
@@ -39,7 +39,8 @@
 .navegacion{
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.3s ease-in-out, opacity 0.5s linear;
+    height: 0;
+    transition: visibility 0.3s ease-in-out, opacity 0.5s linear,height 0.9s linear;
 
     @include tablet {
         display: flex;
@@ -47,13 +48,13 @@
         opacity: 1;
         visibility: visible;
     }
-
     a{
         color: $blanco;
         text-decoration: none;
         font-size: 2.2rem;
         display: block;
         text-align: center;
+
         @include tablet {
             margin-right: 2rem;
             font-size: 1.8rem;
@@ -79,4 +80,5 @@
 .mostrar{
     visibility: visible; 
     opacity: 1;
+    height: auto;
 }
