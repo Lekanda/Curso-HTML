@@ -1,0 +1,24 @@
+.dark-mode{
+    background-color: darken($gris-oscuro, 10);
+
+    p{
+        color: $blanco;
+    }
+    a,h1,h2,h3,h4{
+        color: $gris;
+    }
+
+    .anuncio{
+        background-color: $gris-oscuro;
+        border: 1px solid $gris-oscuro;
+
+        .precio{
+            color: $verde;
+        }
+        .icono{
+            filter: invert(100%);
+        }
+    }
+
+    
+}
