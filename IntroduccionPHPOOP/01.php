@@ -7,17 +7,15 @@
     // Crear una clase
     class Producto {
         public function __construct(public string $nombre,public int $precio,public bool $disponible){}
+        public function mostrarProducto(){
+            echo "El Producto es: " . $this->nombre . " y vale: " . $this->precio;
+        }
     }
 
     $producto = new Producto('Tablet',100, true);
+    $producto->mostrarProducto();
+    
     $producto3 = new Producto('Monitor',200, true);
-
-    echo "<pre>";
-    var_dump($producto);
-    echo "</pre>";
-
-    echo "<pre>";
-    var_dump($producto3);
-    echo "</pre>";
+    $producto3->mostrarProducto();
 
 include 'includes/footer.php';
