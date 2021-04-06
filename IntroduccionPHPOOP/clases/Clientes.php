@@ -2,10 +2,9 @@
 
 namespace App;
 
-class Clientes  
-{
+class Clientes {
     public function __construct()
     {
-        echo "Desde la clase Clientes.php";
+        echo "Desde la clase de Clientes.php";
     }
 }
